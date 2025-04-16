@@ -1,0 +1,873 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SamsungOne', Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Top Link Bar */
+.top-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+}
+
+.top-links a:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.top-links a svg {
+    margin-left: 5px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-box svg {
+    margin-right: 10px;
+}
+
+.cart-icon, .user-icon {
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 630px;
+    background-color: #1a1a1a;
+    background-image: url("https://images.samsung.com/is/image/samsung/assets/in/home/250206/HOME_P3_Main-KV_1440x640_pc_LTR_preview.jpg?imwidth=1366");
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.hero-tv-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    padding-left: 80px;
+    color: white;
+    z-index: 2;
+    width: 550px;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.hero-pricing {
+    margin-top: 250px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.lta-button{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 6px 13px 6px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-arrow.left {
+    left: 20px;
+}
+
+.nav-arrow.right {
+    right: 20px;
+}
+
+/* Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    z-index: 100;
+    width: 280px;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.chat-title {
+    font-size: 14px;
+    font-weight: 600;
+    width: 85%;
+    line-height: 1.3;
+}
+
+.chat-close {
+    background-color: #f0f0f0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* Feedback Button */
+.feedback-btn {
+    position: fixed;
+    right: -35px;
+    top: 50%;
+    transform: rotate(-90deg);
+    background-color: #009c73;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 90;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    border-bottom: 2px solid #eee;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  nav li.active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+  }
+  
+  .highlight-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .left-panel {
+    flex: 1;
+    min-width: 600px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-item {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  .grid-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .grid-item p {
+    color: black;
+    padding: 70px 150px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .promo-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .right-panel {
+    flex: 1;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-left: 40px;
+  }
+  
+  .offer-card {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+  }
+  
+  
+  .offer-card-item1 {
+    background-image: url('https://images.samsung.com/is/image/samsung/assets/in/home/250312/330x330_Small-Tile_Paradigm.jpg?$330_330_JPG$');
+  }
+  .offer-card-item2 {
+    background-image: url('https://images.samsung.com/is/image/samsung/assets/in/home/250404/3D_Small_Tile_330x330.jpg?$330_330_JPG$');
+  }
+  .offer-card-item3 {
+    background-image: url('https://images.samsung.com/is/image/samsung/assets/in/home/250416/WA80F08H2B_Small_Tile_330x330.jpg?$330_330_JPG$');
+  }
+  .offer-card-item4 {
+    background-image: url('https://images.samsung.com/is/image/samsung/assets/in/home/250403/S10-FE_330X330.jpg?$330_330_JPG$');
+  }
+  
+  .offer-card p {
+    color: black;
+    padding: 40px 10px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+  
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content {
+        padding-left: 40px;
+        width: 450px;
+    }
+    
+    .left-panel {
+        min-width: 500px;
+    }
+    
+    .grid-item {
+        height: 450px;
+    }
+    
+    .grid-item p {
+        padding: 50px 100px;
+    }
+    
+    .right-panel {
+        min-width: 330px;
+        margin-left: 20px;
+    }
+    
+    .offer-card {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+    .top-links {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    
+    .header {
+        padding: 0 20px;
+        height: 60px;
+    }
+    
+    .search-box {
+        width: 150px;
+    }
+    
+    .main-nav li {
+        margin: 0 10px;
+    }
+    
+    .hero {
+        height: 500px;
+        flex-direction: column;
+    }
+    
+    .hero-left, .hero-right {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .hero-content {
+        padding-left: 30px;
+        width: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-pricing {
+        margin-top: 100px;
+        font-size: 1rem;
+    }
+    
+    .highlight-section {
+        flex-direction: column;
+    }
+    
+    .left-panel, .right-panel {
+        min-width: 100%;
+        margin-left: 0;
+    }
+    
+    .grid-item {
+        height: 400px;
+    }
+    
+    .grid-item p {
+        padding: 40px 80px;
+    }
+    
+    .right-panel {
+        margin-top: 20px;
+    }
+    
+    .offer-card {
+        height: 230px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    .top-links {
+        display: none;
+    }
+    
+    .header {
+        padding: 0 15px;
+        height: 50px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    /* Add mobile menu button */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .search-box {
+        width: 120px;
+        margin-right: 10px;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-content {
+        padding-left: 20px;
+        width: 320px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-pricing {
+        margin-top: 80px;
+        font-size: 0.9rem;
+    }
+    
+    .cta-button {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-item {
+        height: 350px;
+    }
+    
+    .grid-item p {
+        padding: 30px 60px;
+        font-size: 1rem;
+    }
+    
+    .right-panel {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .offer-card {
+        height: 200px;
+    }
+    
+    .offer-card p {
+        padding: 30px 5px;
+        font-size: 0.85rem;
+    }
+    
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .chat-widget {
+        bottom: 50px;
+        right: 20px;
+        width: 240px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .header {
+        justify-content: space-between;
+    }
+    
+    .search-container {
+        display: none;
+    }
+    
+    .mobile-search-btn {
+        display: block;
+        margin-right: 15px;
+    }
+    
+    .hero {
+        height: 350px;
+    }
+    
+    .hero-content {
+        padding-left: 15px;
+        width: 280px;
+    }
+    
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-pricing {
+        margin-top: 60px;
+        font-size: 0.8rem;
+    }
+    
+    .grid-item {
+        height: 280px;
+    }
+    
+    .grid-item p {
+        padding: 20px 40px;
+        font-size: 0.9rem;
+    }
+    
+    .right-panel {
+        grid-template-columns: 1fr;
+    }
+    
+    .offer-card {
+        height: 180px;
+    }
+    
+    .promo-text {
+        font-size: 1rem;
+    }
+    
+    /* Navigation styles for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .chat-widget {
+        width: 220px;
+        bottom: 30px;
+        right: 10px;
+    }
+    
+    .feedback-btn {
+        right: -40px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Ultra small devices (smaller phones) */
+@media (max-width: 420px) {
+    .hero-content {
+        width: 250px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .grid-item {
+        height: 220px;
+    }
+    
+    .grid-item p {
+        padding: 15px 30px;
+        font-size: 0.8rem;
+    }
+    
+    .offer-card {
+        height: 150px;
+    }
+    
+    .offer-card p {
+        padding: 20px 5px;
+        font-size: 0.75rem;
+    }
+    
+    .chat-widget {
+        width: 200px;
+    }
+    
+    .chat-title {
+        font-size: 12px;
+    }
+    
+    .avatar-img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.key-feature-tab__header-wrap {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .key-feature-tab__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .tab {
+    overflow-x: auto;
+  }
+  
+  .tab__list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    border-bottom: 1px solid #444;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab__item {
+    position: relative;
+  }
+  
+  .tab__item-title {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .tab__item-title:hover,
+  .tab__item--active .tab__item-title {
+    color: #fff;
+  }
+  
+  .tab__item-line {
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+    margin-top: 0.25rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .tab__item--active .tab__item-line {
+    transform: scaleX(1);
+  }
+  key-feature-tab__img {
+    background-color: #000;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .key-feature-tab__img img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+  
+  .key-feature-tab__text-wrap {
+    color: #fff;
+    background-color: #000; /* match the tab background */
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .key-feature-tab__headline {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .key-feature-tab__desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  @media (max-width: 600px) {
+    .key-feature-tab__headline {
+      font-size: 1.5rem;
+    }
+  
+    .key-feature-tab__desc {
+      font-size: 1rem;
+    }
+  }
+/* CTA Wrapper */
+.key-feature-tab__cta-wrap {
+    background-color: #000;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  
+  /* Inner container */
+  .key-feature-tab__cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Base CTA style */
+  .cta {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Underline style CTA */
+  .cta--underline {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding-bottom: 2px;
+  }
+  
+  .cta--underline:hover {
+    color: #ddd;
+    border-color: #ddd;
+  }
+  
+  /* Contained button CTA */
+  .cta--contained {
+    background-color: #fff;
+    color: #000;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  .cta--contained:hover {
+    background-color: #e5e5e5;
+  }
+  
+  /* Color modifier */
+  
+      
+  
